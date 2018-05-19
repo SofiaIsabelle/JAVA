@@ -19,10 +19,15 @@ public class GuessingGame {
 				// guessing number
 				int guess = 0; 
 				
+				// variable to hold the number of tries of a user
+				int numOfTries = 0; 
+				
 				while (guess != theNumber) {
 					System.out.println("Guess a number between 1 and 100.");
 				    //Get the users guess
 					guess = scan.nextInt();
+					// Add 1 to the number of tries 
+					numOfTries++;
 					
 					if(guess < theNumber)
 						System.out.println(guess + " is too low. Please try again.");
@@ -33,6 +38,7 @@ public class GuessingGame {
 					
 				
 				} // end of while loop for guessing 
+				System.out.println("It only took you " + numOfTries + " tries! Good work!");
 		// ask for 'y' to play again
 				System.out.println(" Would you like to play again (y/n) ? ");
 		        playAgain = scan.next();
